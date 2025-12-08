@@ -1,5 +1,5 @@
 const STORAGE_KEY = 'hst-data-v3';
-const LIMIT = 500; // set goal here
+const LIMIT = 600; // set goal here
 
 const defaultItems = [
   { id: 'gradeA', name: 'חמישית', points: 0 },
@@ -388,4 +388,5 @@ setInterval(updateSaveInfo, 5000);
   // expose control
   window.hst = Object.assign(window.hst || {}, { state, saveState, loadState, render, showPopup, closePopup, dvd: { start: startDvd, stop: stopDvd } });
 })();
+
 
