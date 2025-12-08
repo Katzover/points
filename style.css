@@ -1,0 +1,77 @@
+:root{
+  --bg:#0b3b6e;       /* solid playful navy */
+  --card:#123f6b;     /* solid card blue */
+  --accent:#ffffff;   /* fun vivid pink accent */
+  --muted:#a8c6e8;    /* muted text color */
+  --success:#10b981;  /* keep success */
+  --overflow:#ff6b35; /* orange for overflow */
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter, 'Noto Sans Hebrew', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background:var(--bg);color:#e6eef8}
+body{display:flex;align-items:center;justify-content:center;padding:28px}
+.app{width:1400px;max-width:99%;background:var(--card);border-radius:18px;padding:32px;box-shadow:0 14px 40px rgba(2,6,23,0.45);border:1px solid rgba(255,255,255,0.03)}
+header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.header-title{display:flex;flex-direction:column;align-items:flex-start}
+header h1{margin:0;font-size:22px;font-weight:800}
+.subtitle{margin:6px 0 0;color:var(--muted);font-weight:600}
+.encouragement{margin-top:8px;background:var(--accent);color:#072033;padding:8px 12px;border-radius:10px;font-weight:800;display:inline-block}
+.bars{display:flex;flex-direction:column;gap:14px;margin-top:18px}
+.bar-card{background:var(--card);padding:12px;border-radius:12px;display:flex;align-items:center;gap:12px}
+.meta{width:220px;min-width:160px}
+.meta h3{margin:0;font-size:16px}
+.meta p{margin:6px 0 0;color:var(--muted);font-size:13px}
+.controls{display:flex;gap:8px;align-items:center}
+.btn{background:var(--accent);border:none;color:#072033;padding:10px 14px;border-radius:14px;cursor:pointer;font-weight:800}
+.btn.secondary{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);padding:8px 12px;border-radius:10px}
+.btn.warning{background:#ffffff;color:#071428}
+.points{min-width:92px;text-align:center;font-weight:700}
+.bar-wrap{flex:1;position:relative;height:28px;background:#0b2440;border-radius:12px;overflow:visible}
+.bar-inner{position:absolute;top:0;bottom:0;left:0;border-radius:8px;background:var(--accent);width:0%}
+.bar-inner.over{background:var(--overflow);box-shadow:0 10px 40px rgba(255,97,35,0.22);animation:shake 0.75s cubic-bezier(.3,.07,.16,1.2) infinite}
+.popup-inner{background:#072033;color:#e6f7ff;border-radius:12px;padding:16px;min-width:360px;box-shadow:0 18px 50px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.04)}
+.bar-label{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.leading-badge{background:rgba(255,255,255,0.06);padding:4px 8px;border-radius:999px;font-size:12px;color:#fff}
+.bar-card .points small{color:var(--muted);font-weight:400}
+
+/* School card emphasis */
+.school-card{transform:scale(1.03);border-left:8px solid var(--accent);padding-left:14px;background:#0f4f86;margin:6px 0 10px}
+/* placeholder removed (fixed typo) */
+.school-card .bar-wrap{height:180px}
+.school-card .meta h3{font-size:22px}
+.school-card .points{font-size:22px}
+.school-card .bar-inner{border-radius:14px;box-shadow:0 22px 80px rgba(0,0,0,0.18)}
+.school-card .bar-inner.over{box-shadow:0 24px 100px rgba(255,97,35,0.22)}
+
+@keyframes shake{
+  0%{transform:translateX(0) translateY(0)}
+  50%{transform:translateX(-2px) translateY(-2px)}
+  100%{transform:translateX(0) translateY(0)}
+}
+
+/* Make the school card span visually more width by increasing padding and elevating it */
+.school-card{padding:20px;border-radius:18px}
+.school-card .perc{font-size:22px;font-weight:900}
+
+/* Button hover - no animations, instant style only */
+.btn:hover{filter:brightness(0.98)}
+
+/* No entrance animations - keep layout static */
+.perc{min-width:84px;text-align:center;font-weight:700}
+.footer-controls{display:flex;align-items:center;justify-content:space-between;margin-top:18px}
+.info{color:var(--muted)}
+.popup{position:fixed;left:50%;top:12%;transform:translateX(-50%);z-index:60}
+.popup.hidden{display:none}
+.popup-inner{background:#072033;color:#e6f7ff;border-radius:12px;padding:16px;min-width:320px;box-shadow:0 18px 50px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.04)}
+.popup h2{margin:0 0 8px 0}
+.popup-close{position:absolute;right:8px;top:6px;background:transparent;border:none;color:#083447;font-size:20px}
+.bar-label{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.leading-badge{background:rgba(255,255,255,0.06);padding:4px 8px;border-radius:999px;font-size:12px;color:#fff}
+.bar-card .points small{color:var(--muted);font-weight:400}
+
+/* RTL adjustments for numeric alignment */
+.meta{direction:ltr;text-align:right}
+
+@media (max-width:640px){
+  .app{padding:14px}
+  .meta{width:180px}
+}

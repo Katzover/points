@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>מעקב ניקוד - בית ספר</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+Hebrew:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <div class="header-title">
+        <h1>מעקב נקודות כיתות</h1>
+        <p class="subtitle">מטרה: <strong id="limitLabel">600</strong> נקודות</p>
+      </div>
+      <div id="encouragement" class="encouragement" aria-live="polite" aria-atomic="true"></div>
+    </header>
+
+    <section id="bars" class="bars">
+      <!-- Bars inserted by JS -->
+    </section>
+
+    <footer class="footer-controls">
+      <button id="resetBtn" class="btn warning">לאפס ל-0</button>
+      <div id="saveInfo" class="info">שמור אוטומטית</div>
+    </footer>
+  </main>
+
+  <div id="popup" class="popup hidden" role="dialog" aria-live="polite">
+    <div class="popup-inner">
+      <button id="popupClose" class="popup-close" aria-label="סגור">×</button>
+      <h2>עדכונים</h2>
+      <div id="popupContent"></div>
+    </div>
+  </div>
+
+  <script src="app.js" type="module"></script>
+</body>
+</html>
