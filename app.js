@@ -293,7 +293,7 @@ setInterval(()=>saveState(), 3000);
 
 setInterval(function() {
   location.reload();
-}, 5000);
+}, 15000);
 
 
 // initial render
