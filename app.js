@@ -293,7 +293,7 @@ setInterval(()=>saveState(), 3000);
 
 setInterval(function() {
   location.reload();
-}, 15000);
+}, 60000);
 
 
 // initial render
@@ -410,6 +410,7 @@ setInterval(updateSaveInfo, 5000);
   // expose control
   window.hst = Object.assign(window.hst || {}, { state, saveState, loadState, render, showPopup, closePopup, dvd: { start: startDvd, stop: stopDvd } });
 })();
+
 
 
 
