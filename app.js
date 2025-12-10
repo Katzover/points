@@ -403,13 +403,14 @@ setInterval(updateSaveInfo, 5000);
     }, 10000);
     
   }
-  setInterval(toggleEmbed, 20000);
+  setInterval(toggleEmbed, 10000);
   // start automatically
   startDvd();
 
   // expose control
   window.hst = Object.assign(window.hst || {}, { state, saveState, loadState, render, showPopup, closePopup, dvd: { start: startDvd, stop: stopDvd } });
 })();
+
 
 
 
