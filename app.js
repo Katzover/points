@@ -386,11 +386,30 @@ setInterval(updateSaveInfo, 5000);
     y = Math.min(y, maxY);
   });
 
+
+  function toggleEmbed() {
+
+    const frame = document.getElementById("embedFrame")
+    const main = document.getElementById("mainContent")
+
+    frame.src = "https://causematch.com/giborei-sajaiea"
+
+    frame.style.display = "block"; 
+    main.style.display = "none";
+
+    setTimeout(() => {
+        frame.style.display = "none";
+        main.style.display = "block";
+    }, 10000);
+    
+  }
+  setInterval(toggleEmbed, 20000);
   // start automatically
   startDvd();
 
   // expose control
   window.hst = Object.assign(window.hst || {}, { state, saveState, loadState, render, showPopup, closePopup, dvd: { start: startDvd, stop: stopDvd } });
 })();
+
 
 
